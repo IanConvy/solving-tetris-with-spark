@@ -93,7 +93,7 @@ def generate_avgs(height, width, spark_session):
         avgs = best_choice.select("id", (1/7 + sfn.col("max_avg")/7).alias("max_avg")).groupBy("id").agg(sfn.sum("max_avg").alias("avg"))
         depth +=1
 
-if __name__ == "__main__":
+if __name__ == "__main__": # Example code for computing connections and averages for a 6-tile board.
     spark = sql.SparkSession.builder.config("spark.driver.memory", "15g").getOrCreate()
-    # generate_connections(20, 6, spark)
+    generate_connections(20, 6, spark)
     generate_avgs(20, 6, spark)

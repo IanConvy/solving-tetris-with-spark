@@ -1,9 +1,7 @@
 import random
-import tkinter as tk
 
 import pyspark.sql as sql
 import pyspark.sql.functions as sfn
-import matplotlib.pyplot as plt
 
 import analyze
 
@@ -74,7 +72,7 @@ def multiple_runs(runs, start_board, height, num_pieces, avgs):
     print(f"Exp: {expected:.4f} | Avg: {sum(totals) / runs:.4f} | Best:{max(totals)}")
     return move_lists
 
-if __name__ == "__main__":
+if __name__ == "__main__": # Example code for optimal play using the generated averages.
     board = 1
     height = 20
     width = 4
