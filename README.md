@@ -1,8 +1,8 @@
-# solving-tetris-with-spark
+# "Solving" Tetris with Apache Spark
 Implements an algorithm in Apache Spark that solves the stacking portion of Tetris for a
 specified board width. Since the piece order in Tetris is randomized, the challenge of stacking
 pieces lies in knowing what stack configuration can handle the widest variety of possible piece sequences
-before a hole is created in the stack. Starting from a given stack configuration, the algorithm uses recusrion
+before a hole is created in the stack. Starting from a given stack configuration, the algorithm uses recursion
 to compute the average number of pieces that a player will be able to place under optimal play before creating
 a hole. Once a table of these average values is computed, the optimal strategy is to always place the next piece 
 such that the average for the new stack configuration is maximized.
